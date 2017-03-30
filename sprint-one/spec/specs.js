@@ -145,6 +145,7 @@ define([
 
     describe('queue-specific behavior', function() {
       it('removes the least recently added of two items', function() {
+        debugger;
         queue.enqueue('a');
         queue.enqueue('b');
         expect(queue.dequeue()).to.equal('a');
