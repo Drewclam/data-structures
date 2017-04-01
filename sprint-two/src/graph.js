@@ -1,5 +1,5 @@
 
-
+//POMANDER
 // Instantiate a new graph
 var Graph = function() {
   this.nodes = {};
@@ -28,8 +28,8 @@ Graph.prototype.removeNode = function(value) {
   }
 
   _.each(edges, function(edgeVal) {
-    this.removeEdge(value, edgeVal)
-  });
+    this.removeEdge(value, edgeVal);
+  }).bind(this);
 
   delete this.nodes[value];
 };
