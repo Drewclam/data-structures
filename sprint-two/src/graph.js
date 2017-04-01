@@ -1,5 +1,4 @@
 
-//POMANDER
 // Instantiate a new graph
 var Graph = function() {
   this.nodes = {};
@@ -27,9 +26,9 @@ Graph.prototype.removeNode = function(value) {
     this.removeEdge(value, edgeVal);
   }
 
-  _.each(edges, function(edgeVal) {
-    this.removeEdge(value, edgeVal);
-  }).bind(this);
+  // _.each(edges, function(edgeVal) {  // function(obj, iterator, context)
+  //   this.removeEdge(value, edgeVal);
+  // }, this);
 
   delete this.nodes[value];
 };
@@ -53,6 +52,9 @@ Graph.prototype.removeEdge = function(fromVal, toVal) {
 
 // Pass in a callback which will be executed on each node of the graph.
 Graph.prototype.forEachNode = function(cb) {
+  for (var key in this.nodes) {
+    cb(key);
+  }
 };
 
 // each node in graph can have a value and edges which is a collection
@@ -69,7 +71,4 @@ var ourGraph = new Graph();
  * Complexity: What is the time complexity of the above functions?
  */
 
-// {4: {value: 4, edges: {1: 1, 3: 3}}, 1: {value: 1, edges: {4: 4, 3: 3}}, /* 3: {value: 3, edges: {1: 1, 4: 4}} */}
-
-// {1: 1, 4: 4}  1  4
 
