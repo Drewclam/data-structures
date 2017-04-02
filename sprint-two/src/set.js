@@ -23,6 +23,7 @@ setPrototype.remove = function(item) {
   for (var i = 0; i < this._storage.length; i++) {
     if (this._storage[i] === item) {
       this._storage.splice(i, 1);
+      break;
     }
   }
 };
@@ -30,3 +31,7 @@ setPrototype.remove = function(item) {
 /*
  * Complexity: What is the time complexity of the above functions?
  */
+// Set() is constant time complexity
+// add() is constant time complexity
+// contains() is linear time complexity
+// remove() is linear time complexity

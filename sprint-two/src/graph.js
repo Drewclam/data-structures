@@ -21,14 +21,13 @@ Graph.prototype.contains = function(value) {
 // Removes a node from the graph.
 Graph.prototype.removeNode = function(value) {
   var edges = this.nodes[value].edges;
-
   for (var edgeVal in edges) {
     this.removeEdge(value, edgeVal);
   }
 
   // _.each(edges, function(edgeVal) {  // function(obj, iterator, context)
   //   this.removeEdge(value, edgeVal);
-  // }, this);
+  // });
 
   delete this.nodes[value];
 };
@@ -70,5 +69,12 @@ var ourGraph = new Graph();
 /*
  * Complexity: What is the time complexity of the above functions?
  */
-
+// addNode() is constant time complexity
+// contains() is constnat time complexity
+// removeNode() is linear time complexity
+// hasEdge() is constant time complexity
+// addEdge() is constant time complexity
+// removeEdge() is constnat time complexity
+// forEachNode() is linear time complexity
+// Node() is constant time complexity
 

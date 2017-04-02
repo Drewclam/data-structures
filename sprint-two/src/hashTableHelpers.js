@@ -1,4 +1,4 @@
-/*
+  /*
  ********** NOTE: **********
  * Do not edit this code unless you see a bug!
  */
@@ -57,6 +57,9 @@ var getIndexBelowMaxForKey = function(str, max) {
 /*
  * Complexity: What is the time complexity of the above functions?
  */
-
-
+// get() has constant time complexity
+// set() has constant time complexity
+// each() has linear time complexity
+// checkLimit() has constant time complexity
+// getIndexBelowMaxForKey() is linear time complexity
 
